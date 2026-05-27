@@ -1,4 +1,6 @@
 //타입들 변수 선언
+let types = ["normal", "fighting", "flying", "poison", "land", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "esper", "ice", "dragon", "evil", "fairy"];
+/*
 let normal = 1; //노말
 let fighting = 2; //격투
 let flying = 3; //비행
@@ -17,6 +19,7 @@ let ice = 15; //얼음
 let dragon = 16; //드래곤
 let evil = 17; //악
 let fairy = 18; //페어리
+*/
 
 let one = "user";
 let two = "com";
@@ -24,10 +27,9 @@ let two = "com";
 //상성 계산 ==> 일반 4분의 1
 
 //노말 타입일 때 상성
-if (user == normal) {
+if (user == types[0]) {
     if (com == ghost) {
         //고스트는 0
-        
     }
     else if (com == rock || com == steel) {
         //바위 강철은 8분의 1
@@ -49,7 +51,7 @@ else if (user == fighting) {
         //고스트는 0
     }
     else {//나머지는 4분의 1
-    
+
     }
 }
 
@@ -63,14 +65,14 @@ else if (user == flying) {
     }
     else {
         //나머지 4분의 1
-    }       
+    }
 }
 
 //독 타입일 때 상성
 else if (user == )
-    //풀, 벌레에 2분의 1
-    //독, 땅, 바위, 고스트 8분의 1
-    //나머지 4분의 1
+//풀, 벌레에 2분의 1
+//독, 땅, 바위, 고스트 8분의 1
+//나머지 4분의 1
 
 //땅 타입일 때 상성
 
@@ -82,3 +84,23 @@ else if (user == )
 
 //불꽃, 얼음, 비행, 벌레 2분의 1
 //격투, 땅 8분의 1
+
+/*
+<label><input type="radio" name="fruit" value="구구"> 사과</label>
+<label><input type="radio" name="fruit" value="구구구2"> 바나나</label>
+<label><input type="radio" name="fruit" value="포도"> 포도</label>
+
+<button onclick="getRadioValue()">값 확인</button>
+<p id="result"></p>
+코드를 사용할 때는 주의가 필요합니다.2. JavaScriptjavascriptfunction getRadioValue() {
+    // name이 'fruit'인 라디오 버튼 중 체크된(:checked) 요소를 선택
+    const selectedRadio = document.querySelector('input[name="fruit"]:checked');
+
+    if (selectedRadio) {
+        // 값이 존재하면 출력
+        document.getElementById("result").innerText = "선택된 과일: " + selectedRadio.value;
+    } else {
+        alert("과일을 선택해 주세요.");
+    }
+}
+    */
