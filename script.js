@@ -23,7 +23,7 @@ let fairy = 18; //페어리
 
 
 //document.getElementById("result").innerText = "선택된 거: " + selectedRadio.value;
-const MyTypeL = function() {
+const MyTypeL = function () {
 
     const MyType = document.querySelector('input[name="type"]:checked');
 
@@ -91,14 +91,35 @@ function startCheck() {
     else if (OneResult == "드래곤") {
         one_type = types[15];
     }
+    else if (OneResult == "악") {
+        one_type = types[16];
+    }
+    else {
+        one_type = types[17];
+    }
+    console.log(one_type);
 
     /*
-
-let dragon = 16; //
-let evil = 17; //악
-let fairy = 18; //페어리
+let two_type = types[Math.floor(Math.random() * types.length)];
 */
-    console.log(one_type);
+    let two_type = types[3]
+    console.log(two_type);
+
+
+    //노말 타입일 때 상성
+    if (one_type == types[0]) {
+        if (two_type == types[7]) {
+            //고스트 데미지 0
+            console.log("데미지가 없습니다.");
+        }
+        else if (two_type == types[5] || two_type == types[8]) {
+            //바위 강철은 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            console.log("데미지 4분의 1");
+        }
+    }
 }
 
 
@@ -111,18 +132,7 @@ let two = "com";
 let user = one;
 let com = two;
 
-//노말 타입일 때 상성
-if (user == types[0]) {
-    if (com == ghost) {
-        //고스트는 0
-    }
-    else if (com == rock || com == steel) {
-        //바위 강철은 8분의 1
-    }
-    else {
-        //데미지 4분의 1
-    }
-}
+
 
 //격투 타입일 때 생성
 else if (user == types[1]) {
