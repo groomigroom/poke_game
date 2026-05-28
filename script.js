@@ -102,7 +102,7 @@ function startCheck() {
     /*
 let two_type = types[Math.floor(Math.random() * types.length)];
 */
-    let two_type = types[3]
+    let two_type = types[17] //
     console.log(two_type);
 
 
@@ -117,7 +117,41 @@ let two_type = types[Math.floor(Math.random() * types.length)];
             console.log("데미지 8분의 1");
         }
         else {
+            //나머지는 일반 데미지
             console.log("데미지 4분의 1");
+        }
+    }
+
+    //격투 타입일 때 생성
+    else if (one_type == types[1]) {
+        if (two_type == types[0] || two_type == types[14] || two_type == types[5]) {
+            //노말, 얼음, 바위에 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[3] || two_type == types[6] || two_type == types[2] || two_type == types[13]) {
+            //독, 벌레, 비행, 에스퍼 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else if (two_type == types[7]) {
+            //고스트는 0
+            console.log("데미지가 없습니다.");
+        }
+        else {
+            //나머지는 4분의 1
+            console.log("데미지 4분의 1");
+        }
+    }
+
+    //비행 타입일 때 상성
+    else if (user == flying) {
+        if (com == grass || com == fighting || com == bug) {
+            //풀, 격투, 벌레에 2분의 1
+        }
+        else if (com == electric || com == rock) {
+            //전기, 바위에 8분의 1
+        }
+        else {
+            //나머지 4분의 1
         }
     }
 }
@@ -134,34 +168,9 @@ let com = two;
 
 
 
-//격투 타입일 때 생성
-else if (user == types[1]) {
-    if (com == normal || com == ice || com == rock) {
-        //노말, 얼음, 바위에 2분의 1
-    }
-    else if (com == poison || com == bug || com == flying || com == esper) {
-        //독, 벌레, 비행, 에스퍼 8분의 1
-    }
-    else if (com == ghost) {
-        //고스트는 0
-    }
-    else {//나머지는 4분의 1
 
-    }
-}
 
-//비행 타입일 때 상성
-else if (user == flying) {
-    if (com == grass || com == fighting || com == bug) {
-        //풀, 격투, 벌레에 2분의 1
-    }
-    else if (com == electric || com == rock) {
-        //전기, 바위에 8분의 1
-    }
-    else {
-        //나머지 4분의 1
-    }
-}
+
 
 //독 타입일 때 상성
 else if (user == poison) { }
