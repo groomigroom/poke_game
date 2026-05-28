@@ -143,17 +143,40 @@ let two_type = types[Math.floor(Math.random() * types.length)];
     }
 
     //비행 타입일 때 상성
-    else if (user == flying) {
-        if (com == grass || com == fighting || com == bug) {
+    //확인하기 작동 잘하는지
+    else if (one_type == types[2]) {
+        if (two_type == types[11] || two_type == types[1] || two_type == types[6]) {
             //풀, 격투, 벌레에 2분의 1
+            console.log("데미지 2분의 1");
         }
-        else if (com == electric || com == rock) {
+        else if (two_type == types[12] || two_type == types[5]) {
             //전기, 바위에 8분의 1
+            console.log("데미지 8분의 1");
         }
         else {
             //나머지 4분의 1
+            console.log("데미지 4분의 1");
         }
     }
+
+    //독 타입일 때 상성
+    else if (one_type == types[3]) {
+        if (two_type == types[11] || two_type == types[6]) {
+            //풀, 벌레에 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[3] || two_type == types[4] || two_type == types[5] || two_type == types[7]) {
+            //독, 땅, 바위, 고스트 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
+    }
+
+
+
 }
 
 
@@ -167,16 +190,6 @@ let user = one;
 let com = two;
 
 
-
-
-
-
-
-//독 타입일 때 상성
-else if (user == poison) { }
-//풀, 벌레에 2분의 1
-//독, 땅, 바위, 고스트 8분의 1
-//나머지 4분의 1
 
 //땅 타입일 때 상성
 
