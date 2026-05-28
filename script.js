@@ -175,8 +175,101 @@ let two_type = types[Math.floor(Math.random() * types.length)];
         }
     }
 
+    //땅 타입일 때 상성
+    else if (one_type == types[4]) {
+        if (two_type == types[9] || two_type == types[12] || two_type == types[3] || two_type == types[5]) {
+            //불꽃, 전기, 독, 바위 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[11] || two_type == types[6]) {
+            //풀, 벌레 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else if (two_type == types[2]) {
+            //비행에 0
+            console.log("데미지가 없습니다.");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
+    }
 
+    //바위 타입일 때 상성
+    else if (one_type == types[5]) {
+        if (two_type == types[9] || two_type == types[14] || two_type == types[2] || two_type == types[6]) {
+            //불꽃, 얼음, 비행, 벌레 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[1] || two_type == types[4]) {
+            //격투, 땅 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
+    }
 
+    //벌레 타입일 때 상성
+    else if (one_type == types[6]) {
+
+    }
+
+    //고스트 타입일 때 상성
+    else if (one_type == types[7]) {
+
+    }
+
+    //강철 타입일 때 상성
+    else if (one_type == types[8]) {
+
+    }
+
+    //불꽃 타입일 때 상성
+    else if (one_type == types[9]) {
+
+    }
+
+    //물 타입일 때 상성
+    else if (one_type == types[10]) {
+
+    }
+
+    //풀 타입일 때 상성
+    else if (one_type == types[11]) {
+
+    }
+
+    //전기 타입일 때 상성
+    else if (one_type == types[12]) {
+
+    }
+
+    //에스퍼 타입일 때 상성
+    else if (one_type == types[13]) {
+
+    }
+
+    //얼음 타입일 때 상성
+    else if (one_type == types[14]) {
+
+    }
+
+    //드래곤 타입일 때 상성
+    else if (one_type == types[15]) {
+
+    }
+
+    //악 타입일 때 상성
+    else if (one_type == types[16]) {
+
+    }
+
+    //페어리 타입일 때 상성
+    else {
+
+    }
 }
 
 
@@ -189,18 +282,6 @@ let two = "com";
 let user = one;
 let com = two;
 
-
-
-//땅 타입일 때 상성
-
-//불꽃, 전기, 독, 바위 2분의 1
-//풀, 벌레 8분의 1
-//비행에 0
-
-//바위 타입일 때 상성
-
-//불꽃, 얼음, 비행, 벌레 2분의 1
-//격투, 땅 8분의 1
 
 */
 
