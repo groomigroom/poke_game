@@ -23,64 +23,36 @@ let fairy = 18; //페어리
 
 
 //document.getElementById("result").innerText = "선택된 거: " + selectedRadio.value;
-const MyTypeL = function getMyType() {
+const MyTypeL = function() {
 
     const MyType = document.querySelector('input[name="type"]:checked');
 
     if (MyType) {
         console.log(MyType.value);
         document.querySelector(".mt_p").innerText = "선택한 타입은: " + MyType.value;
+        return MyType.value;
     }
     else {
         alert("타입 선택");
+        return null;
     }
 
     return MyType.value
 }
 
-if (MyTypeL == "노말") {
-    console.log(types[0]);
-}
-
-/*
-// types 배열 예시
-const types = ["노말 타입 데이터", "격투 타입 데이터"];
-
-// 1. 변수명 MyTypeL에 익명 함수를 할당합니다.
-const MyTypeL = function () { 
-
-    const MyType = document.querySelector('input[name="type"]:checked');
-
-    if (MyType) {
-        console.log(MyType.value);
-        document.querySelector(".mt_p").innerText = "선택한 타입은: " + MyType.value;
-        return MyType.value; // 체크된 값(예: "노말")을 바깥으로 보냅니다.
-    }
-    else {
-        alert("타입 선택");
-        return null; // 선택 안 되었을 때는 null 반환
-    }
-}
-
-// 2. HTML 버튼이 클릭되었을 때 실행할 '진짜 실행용 함수'를 만듭니다.
 function startCheck() {
-    // 함수를 실행하고 그 결과값("노말")을 result 변수에 담습니다.
-    const result = MyTypeL(); 
-    
-    // 이제 함수 밖에서 질문하신 모양 그대로 비교할 수 있습니다!
-    if (result == "노말") {
-        console.log(types[0]);
-    } else if (result == "격투") {
-        console.log(types[1]);
+    const Tresult = MyTypeL();
+
+    if (Tresult == "노말") {
+    console.log(types[0]);
+    }
+    else if (Tresult == "노말") {
+    console.log(types[0]);
     }
 }
-코드를 사용할 때는 주의가 필요합니다.2. HTML 수정HTML에서는 이제 getMyType()이 아니라, 위에서 새로 만든 최종 실행 버튼인 startCheck()를 호출해야 에러가 나지 않습니다.html<!-- 변경 전 -->
-<button type="button" onclick="getMyType()">버튼</button>
 
-<!-- 변경 후 -->
-<button type="button" onclick="startCheck()">버튼</button>
 
-*/
+
 
 /*
 let one = "user";
