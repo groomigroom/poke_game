@@ -41,17 +41,65 @@ const MyTypeL = function() {
 }
 
 function startCheck() {
-    const Tresult = MyTypeL();
+    let one_type = "";
+    const OneResult = MyTypeL();
+    if (OneResult == "노말") {
+        one_type = types[0];
+    }
+    else if (OneResult == "격투") {
+        one_type = types[1];
+    }
+    else if (OneResult == "비행") {
+        one_type = types[2];
+    }
+    else if (OneResult == "독") {
+        one_type = types[3];
+    }
+    else if (OneResult == "땅") {
+        one_type = types[4];
+    }
+    else if (OneResult == "바위") {
+        one_type = types[5];
+    }
+    else if (OneResult == "벌레") {
+        one_type = types[6];
+    }
+    else if (OneResult == "고스트") {
+        one_type = types[7];
+    }
+    else if (OneResult == "강철") {
+        one_type = types[8];
+    }
+    else if (OneResult == "불꽃") {
+        one_type = types[9];
+    }
+    else if (OneResult == "물") {
+        one_type = types[10];
+    }
+    else if (OneResult == "풀") {
+        one_type = types[11];
+    }
+    else if (OneResult == "전기") {
+        one_type = types[12];
+    }
+    else if (OneResult == "에스퍼") {
+        one_type = types[13];
+    }
+    else if (OneResult == "얼음") {
+        one_type = types[14];
+    }
+    else if (OneResult == "드래곤") {
+        one_type = types[15];
+    }
 
-    if (Tresult == "노말") {
-    console.log(types[0]);
-    }
-    else if (Tresult == "노말") {
-    console.log(types[0]);
-    }
+    /*
+
+let dragon = 16; //
+let evil = 17; //악
+let fairy = 18; //페어리
+*/
+    console.log(one_type);
 }
-
-
 
 
 /*
