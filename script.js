@@ -229,27 +229,86 @@ let two_type = types[Math.floor(Math.random() * types.length)];
 
     //고스트 타입일 때 상성
     else if (one_type == types[7]) {
-
+        if (two_type == types[0]) {
+            //노말 0배
+            console.log("데미지가 없습니다.");
+        }
+        else if (two_type == types[13] || two_type == types[7]) {
+            //에스퍼, 고스트 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[16]) {
+            //악 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //강철 타입일 때 상성
     else if (one_type == types[8]) {
-
+        if (two_type == types[9] || two_type == types[10] || two_type == types[12] || two_type == types[8]) {
+            //8분의 1 불꽃, 물, 전기, 강철
+            console.log("데미지 8분의 1");
+        }
+        else if (two_type == types[14] || two_type == types[6] || two_type == types[17]) {
+            //2분의 1 얼음, 벌레, 페어리
+            console.log("데미지 2분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //불꽃 타입일 때 상성
     else if (one_type == types[9]) {
-
+        if (two_type == types[11] || two_type == types[14] || two_type == types[6] || two_type == types[8]) {
+            //2분의 1 풀, 얼음, 벌레, 강철
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[9] || two_type == types[10] || two_type == types[5] || two_type == types[15]) {
+            //불꽃, 물, 바위, 드래곤 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //물 타입일 때 상성
     else if (one_type == types[10]) {
-
+        if (two_type == types[9] || two_type == types[4] || two_type == types[5]) {
+            //불꽃, 땅, 바위 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[10] || two_type == types[11] || two_type == types[15]) {
+            //물, 풀, 드래곤 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //풀 타입일 때 상성
     else if (one_type == types[11]) {
-
+        if (two_type == types[10] || two_type == types[4] || two_type == types[5]) {
+            //물, 땅, 바위 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[9] || two_type == types[11] || two_type == types[3] || two_type == types[2] || two_type == types[6] || two_type == types[15] || two_type == types[8]) {
+            //불꽃, 풀, 독, 비행, 벌레, 드래곤, 강철 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //전기 타입일 때 상성
