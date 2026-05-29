@@ -40,85 +40,26 @@ const MyTypeL = function () {
     return MyType.value
 }
 
-function startCheck() {
-    let one_type = "";
-    const OneResult = MyTypeL();
-    if (OneResult == "노말") {
-        one_type = types[0];
-    }
-    else if (OneResult == "격투") {
-        one_type = types[1];
-    }
-    else if (OneResult == "비행") {
-        one_type = types[2];
-    }
-    else if (OneResult == "독") {
-        one_type = types[3];
-    }
-    else if (OneResult == "땅") {
-        one_type = types[4];
-    }
-    else if (OneResult == "바위") {
-        one_type = types[5];
-    }
-    else if (OneResult == "벌레") {
-        one_type = types[6];
-    }
-    else if (OneResult == "고스트") {
-        one_type = types[7];
-    }
-    else if (OneResult == "강철") {
-        one_type = types[8];
-    }
-    else if (OneResult == "불꽃") {
-        one_type = types[9];
-    }
-    else if (OneResult == "물") {
-        one_type = types[10];
-    }
-    else if (OneResult == "풀") {
-        one_type = types[11];
-    }
-    else if (OneResult == "전기") {
-        one_type = types[12];
-    }
-    else if (OneResult == "에스퍼") {
-        one_type = types[13];
-    }
-    else if (OneResult == "얼음") {
-        one_type = types[14];
-    }
-    else if (OneResult == "드래곤") {
-        one_type = types[15];
-    }
-    else if (OneResult == "악") {
-        one_type = types[16];
-    }
-    else {
-        one_type = types[17];
-    }
-    console.log(one_type);
-
-    /*
-let two_type = types[Math.floor(Math.random() * types.length)];
-*/
-    let two_type = types[17] //
-    console.log(two_type);
-
-
+function sangsung(one_type, two_type, two_hp) {
     //노말 타입일 때 상성
     if (one_type == types[0]) {
         if (two_type == types[7]) {
             //고스트 데미지 0
             console.log("데미지가 없습니다.");
+            two_hp -= 0;
+            return two_hp;
         }
         else if (two_type == types[5] || two_type == types[8]) {
             //바위 강철은 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지는 일반 데미지
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -127,18 +68,26 @@ let two_type = types[Math.floor(Math.random() * types.length)];
         if (two_type == types[0] || two_type == types[14] || two_type == types[5]) {
             //노말, 얼음, 바위에 2분의 1
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[3] || two_type == types[6] || two_type == types[2] || two_type == types[13]) {
             //독, 벌레, 비행, 에스퍼 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else if (two_type == types[7]) {
             //고스트는 0
             console.log("데미지가 없습니다.");
+            two_hp -= 0;
+            return two_hp;
         }
         else {
             //나머지는 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -377,16 +326,113 @@ let two_type = types[Math.floor(Math.random() * types.length)];
 
     //악 타입일 때 상성
     else if (one_type == types[16]) {
-        //2분의 1 고스트, 에스퍼
-        //8분의 1 격투, 악, 페어리
+        if (two_type == types[7] || two_type == types[13]) {
+            //2분의 1 고스트, 에스퍼
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[1] || two_type == types[16] || two_type == types[17]) {
+            //8분의 1 격투, 악, 페어리
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //페어리 타입일 때 상성
     else {
-        //2분의 1 격투, 드래곤, 악
-        //8분의 1 독, 강철, 불꽃
-
+        if (two_type == types[1] || two_type == types[15] || two_type == types[16]) {
+            //2분의 1 격투, 드래곤, 악
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[3] || two_type == types[8] || two_type == types[9]) {
+            //8분의 1 독, 강철, 불꽃
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
+}
+
+function startCheck() {
+    let one_type = "";
+    const OneResult = MyTypeL();
+    if (OneResult == "노말") {
+        one_type = types[0];
+    }
+    else if (OneResult == "격투") {
+        one_type = types[1];
+    }
+    else if (OneResult == "비행") {
+        one_type = types[2];
+    }
+    else if (OneResult == "독") {
+        one_type = types[3];
+    }
+    else if (OneResult == "땅") {
+        one_type = types[4];
+    }
+    else if (OneResult == "바위") {
+        one_type = types[5];
+    }
+    else if (OneResult == "벌레") {
+        one_type = types[6];
+    }
+    else if (OneResult == "고스트") {
+        one_type = types[7];
+    }
+    else if (OneResult == "강철") {
+        one_type = types[8];
+    }
+    else if (OneResult == "불꽃") {
+        one_type = types[9];
+    }
+    else if (OneResult == "물") {
+        one_type = types[10];
+    }
+    else if (OneResult == "풀") {
+        one_type = types[11];
+    }
+    else if (OneResult == "전기") {
+        one_type = types[12];
+    }
+    else if (OneResult == "에스퍼") {
+        one_type = types[13];
+    }
+    else if (OneResult == "얼음") {
+        one_type = types[14];
+    }
+    else if (OneResult == "드래곤") {
+        one_type = types[15];
+    }
+    else if (OneResult == "악") {
+        one_type = types[16];
+    }
+    else {
+        //페어리
+        one_type = types[17];
+    }
+    console.log(one_type);
+
+
+    //let two_type = types[Math.floor(Math.random() * types.length)];
+
+
+    let two_type = types[7]
+    console.log(two_type);
+
+    let one_hp = 8;
+    let two_hp = 8;
+
+    let one_att = sangsung(one_type, two_type, two_hp);
+    console.log(one_att);
+    two_hp = one_att;
+    sangsung(two_type, one_type);
+
+
 }
 
 
