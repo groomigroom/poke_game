@@ -213,7 +213,18 @@ let two_type = types[Math.floor(Math.random() * types.length)];
 
     //벌레 타입일 때 상성
     else if (one_type == types[6]) {
-
+        if (two_type == types[9] || two_type == types[1] || two_type == types[3] || two_type == types[2] || two_type == types[7] || two_type == types[8] || two_type == types[17]) {
+            //불꽃, 격투, 풀, 비행, 고스트, 강철, 페어리 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else if (two_type == types[11] || two_type == types[13] || two_type == types[16]) {
+            //풀, 에스퍼, 악 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //고스트 타입일 때 상성
