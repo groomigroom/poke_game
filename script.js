@@ -313,31 +313,78 @@ let two_type = types[Math.floor(Math.random() * types.length)];
 
     //전기 타입일 때 상성
     else if (one_type == types[12]) {
-
+        if (two_type == types[10] || two_type == types[2]) {
+            //2분의 1 물, 비행
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[11] || two_type == types[12] || two_type == types[15]) {
+            //풀, 전기, 드래곤 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else if (two_type == types[4]) {
+            //땅 데미지 0
+            console.log("데미지가 없습니다.");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //에스퍼 타입일 때 상성
     else if (one_type == types[13]) {
-
+        if (two_type == types[1] || two_type == types[3]) {
+            //격투, 독 2분의 1
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[13]) {
+            //에스퍼 8분의 1
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //얼음 타입일 때 상성
     else if (one_type == types[14]) {
-
+        if (two_type == types[11] || two_type == types[4] || two_type == types[2] || two_type == types[15]) {
+            //2분의 1 풀, 땅, 비행, 드래곤
+            console.log("데미지 2분의 1");
+        }
+        else if (two_type == types[10] || two_type == types[14]) {
+            //8분의 1 물, 얼음
+            console.log("데미지 8분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //드래곤 타입일 때 상성
     else if (one_type == types[15]) {
-
+        if (two_type == types[15]) {
+            //2분의 1 드래곤
+            console.log("데미지 2분의 1");
+        }
+        else {
+            //나머지 4분의 1
+            console.log("데미지 4분의 1");
+        }
     }
 
     //악 타입일 때 상성
     else if (one_type == types[16]) {
-
+        //2분의 1 고스트, 에스퍼
+        //8분의 1 격투, 악, 페어리
     }
 
     //페어리 타입일 때 상성
     else {
+        //2분의 1 격투, 드래곤, 악
+        //8분의 1 독, 강철, 불꽃
 
     }
 }
