@@ -521,7 +521,7 @@ function startCheck() {
     let two_type = types[Math.floor(Math.random() * types.length)];
 
 
-    //let two_type = types[7]
+    //let two_type = types[1]
     console.log(two_type);
 
     let one_hp = 16;
@@ -538,7 +538,12 @@ function startCheck() {
         one_hp = two_att;
         console.log("one_hp의 현재 남은 체력은 " + one_hp);
     }
-
+    if (one_hp == 0) {
+        console.log("졌습니다.");
+    }
+    else {
+        console.log("이겼네요");
+    }
 
 
 }
