@@ -45,13 +45,13 @@ function sangsung(one_type, two_type, two_hp) {
     if (one_type == types[0]) {
         if (two_type == types[7]) {
             //고스트 데미지 0
-            console.log("데미지가 없습니다.");
+            console.log(one_type + "이 주는 데미지가 없습니다.");
             two_hp -= 0;
             return two_hp;
         }
         else if (two_type == types[5] || two_type == types[8]) {
             //바위 강철은 8분의 1
-            console.log("데미지 8분의 1");
+            console.log(one_type + "이 주는 데미지 8분의 1");
             two_hp -= 1;
             return two_hp;
         }
@@ -169,14 +169,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[9] || two_type == types[14] || two_type == types[2] || two_type == types[6]) {
             //불꽃, 얼음, 비행, 벌레 2분의 1
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[1] || two_type == types[4]) {
             //격투, 땅 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -185,14 +191,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[9] || two_type == types[1] || two_type == types[3] || two_type == types[2] || two_type == types[7] || two_type == types[8] || two_type == types[17]) {
             //불꽃, 격투, 풀, 비행, 고스트, 강철, 페어리 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else if (two_type == types[11] || two_type == types[13] || two_type == types[16]) {
             //풀, 에스퍼, 악 2분의 1
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -201,18 +213,26 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[0]) {
             //노말 0배
             console.log("데미지가 없습니다.");
+            two_hp -= 0;
+            return two_hp;
         }
         else if (two_type == types[13] || two_type == types[7]) {
             //에스퍼, 고스트 2분의 1
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[16]) {
             //악 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -221,14 +241,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[9] || two_type == types[10] || two_type == types[12] || two_type == types[8]) {
             //8분의 1 불꽃, 물, 전기, 강철
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else if (two_type == types[14] || two_type == types[6] || two_type == types[17]) {
             //2분의 1 얼음, 벌레, 페어리
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -237,14 +263,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[11] || two_type == types[14] || two_type == types[6] || two_type == types[8]) {
             //2분의 1 풀, 얼음, 벌레, 강철
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[9] || two_type == types[10] || two_type == types[5] || two_type == types[15]) {
             //불꽃, 물, 바위, 드래곤 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -253,14 +285,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[9] || two_type == types[4] || two_type == types[5]) {
             //불꽃, 땅, 바위 2분의 1
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[10] || two_type == types[11] || two_type == types[15]) {
             //물, 풀, 드래곤 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -269,14 +307,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[10] || two_type == types[4] || two_type == types[5]) {
             //물, 땅, 바위 2분의 1
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[9] || two_type == types[11] || two_type == types[3] || two_type == types[2] || two_type == types[6] || two_type == types[15] || two_type == types[8]) {
             //불꽃, 풀, 독, 비행, 벌레, 드래곤, 강철 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -285,18 +329,26 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[10] || two_type == types[2]) {
             //2분의 1 물, 비행
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[11] || two_type == types[12] || two_type == types[15]) {
             //풀, 전기, 드래곤 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else if (two_type == types[4]) {
             //땅 데미지 0
             console.log("데미지가 없습니다.");
+            two_hp -= 0;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -305,14 +357,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[1] || two_type == types[3]) {
             //격투, 독 2분의 1
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[13]) {
             //에스퍼 8분의 1
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -321,14 +379,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[11] || two_type == types[4] || two_type == types[2] || two_type == types[15]) {
             //2분의 1 풀, 땅, 비행, 드래곤
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[10] || two_type == types[14]) {
             //8분의 1 물, 얼음
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -337,10 +401,14 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[15]) {
             //2분의 1 드래곤
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -349,14 +417,20 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[7] || two_type == types[13]) {
             //2분의 1 고스트, 에스퍼
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[1] || two_type == types[16] || two_type == types[17]) {
             //8분의 1 격투, 악, 페어리
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
         }
     }
 
@@ -365,14 +439,22 @@ function sangsung(one_type, two_type, two_hp) {
         if (two_type == types[1] || two_type == types[15] || two_type == types[16]) {
             //2분의 1 격투, 드래곤, 악
             console.log("데미지 2분의 1");
+            two_hp -= 4;
+            return two_hp;
         }
         else if (two_type == types[3] || two_type == types[8] || two_type == types[9]) {
             //8분의 1 독, 강철, 불꽃
             console.log("데미지 8분의 1");
+            two_hp -= 1;
+            return two_hp;
         }
         else {
             //나머지 4분의 1
             console.log("데미지 4분의 1");
+            two_hp -= 2;
+            return two_hp;
+            two_hp -= 2;
+            return two_hp;
         }
     }
 }
@@ -438,19 +520,30 @@ function startCheck() {
     console.log(one_type);
 
 
-    //let two_type = types[Math.floor(Math.random() * types.length)];
+    let two_type = types[Math.floor(Math.random() * types.length)];
 
 
-    let two_type = types[11]
+    //let two_type = types[7]
     console.log(two_type);
 
     let one_hp = 8;
     let two_hp = 8;
+    let fcount = 8;
 
-    let one_att = sangsung(one_type, two_type, two_hp);
-    console.log(one_att);
-    two_hp = one_att;
-    sangsung(two_type, one_type);
+    while (one_hp > 0 || two_hp > 0 || fcount == 0) {
+        let one_att = sangsung(one_type, two_type, two_hp);
+        two_hp = one_att;
+        console.log(two_hp);
+        if (two_hp == 0) {
+            break;
+        }
+        let two_att = sangsung(two_type, one_type, one_hp);
+        one_hp = two_att;
+        console.log(one_hp);
+        fcount--;
+        console.log(fcount)
+    }
+
 
 
 }
